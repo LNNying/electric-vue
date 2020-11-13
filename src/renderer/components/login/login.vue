@@ -2,28 +2,28 @@
     <div class="lnn-login-contain">
         <div class="lnn-login">
             <div class="lnn-login-head">
-                <i class="el-icon-sunset"></i> 欢迎登录
+                <Icon type="md-log-in" /> 欢迎登录
             </div>
             <div class="lnn-login-info">
-                <el-form ref="lnn-form" :model="loginForm" :rules="rules">
-                    <el-form-item prop="userName">
-                        <el-input placeholder="请输入用户名" v-model="loginForm.userName">
+                <Form ref="lnn-form" :model="loginForm" :rules="rules">
+                    <FormItem prop="userName">
+                        <Input placeholder="请输入用户名" size="large" v-model="loginForm.userName">
                             <template slot="prepend">
-                                <i class="el-icon-user"></i>
+                                <Icon type="ios-contact-outline" />
                             </template>
-                        </el-input>
-                    </el-form-item>
-                    <el-form-item prop="password">
-                        <el-input placeholder="请输入密码" v-model="loginForm.password">
+                        </Input>
+                    </FormItem>
+                    <FormItem prop="password">
+                        <Input placeholder="请输入密码" size="large" v-model="loginForm.password">
                             <template slot="prepend">
-                                <i class="el-icon-key"></i>
+                                <Icon type="ios-key-outline" />
                             </template>
-                        </el-input>
-                    </el-form-item>
-                </el-form>
+                        </Input>
+                    </FormItem>
+                </Form>
             </div>
             <div class="lnn-login-btn">
-                <el-button type="primary" style="width: 100%;" @click="submitLoginInfo">登录</el-button>
+                <Button type="primary" style="width: 100%;" size="large" @click="submitLoginInfo">登录</Button>
             </div>
         </div>
     </div>
@@ -49,10 +49,10 @@
             submitLoginInfo() {
                 this.$refs['lnn-form'].validate(valid => {
                     if (valid) {
-                        this.$message({
-                            message: '登录成功',
-                            type: 'success',
-                            center: true
+                        this.$Notice.success({
+                            title: '登录成功',
+                            desc: '登录成功',
+                            duration: 5
                         })
                         this.$router.push({
                             name: 'home'
