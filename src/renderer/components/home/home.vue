@@ -1,16 +1,17 @@
 <template>
     <div class="lnn-home-contain">
-        {{canvas}}
+        <map-monitor></map-monitor>
     </div>
 </template>
 
 <script>
+    import MapMonitor from "../map/map-monitor";
     export default {
         name: "home",
+        components: {MapMonitor},
         data() {
             return {
                 canvas: null
-
             }
         },
         methods: {
@@ -26,7 +27,6 @@
             },
         },
         mounted() {
-          this.canvas = this.$util.dasd()
         }
     }
 </script>
