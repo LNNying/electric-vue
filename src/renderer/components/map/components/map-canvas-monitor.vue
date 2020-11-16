@@ -700,7 +700,7 @@
                         this.initCarData()
                     } else {
                         this.loading = false
-                        this.$util.error('当前地图编号' + this.mapCode + '下点位数量为空', 3)
+                        this.$error('当前地图编号' + this.mapCode + '下点位数量为空', 3)
                     }
                 })
             },
@@ -804,7 +804,7 @@
                     })
                 }
                 if (data.length !== 1) {
-                    this.$util.warn('未找到该设备', 3)
+                    this.$warn('未找到该设备', 3)
                     return
                 }
                 this.$refs[data[0]['name']][0].style.boxShadow = '-1px -1px 10px 4px #d80304'
@@ -812,7 +812,7 @@
             // 查询坐标
             searchLocal() {
                 if (this.queryInfo.indexOf(',') === -1) {
-                    this.$util.warn('坐标之间请用逗号隔开', 3)
+                    this.$warn('坐标之间请用逗号隔开', 3)
                     return
                 }
                 let x = this.queryInfo.split(',')[0].trim()
@@ -821,7 +821,7 @@
                     return item['x'] == x && item['y'] == y && item['z'] == this.floorNum
                 })
                 if (dataList.length !== 1) {
-                    this.$util.warn('未找到该坐标', 3)
+                    this.$warn('未找到该坐标', 3)
                     return
                 }
                 this.$nextTick(() => {
@@ -862,15 +862,15 @@
                             }
                             this.mapCans.clearRect(0, 0, canvas.width, canvas.height)
                             this.loading = false
-                            this.$util.error('当前地图编号' + this.mapCode + '下点位数量为空', 3)
+                            this.$error('当前地图编号' + this.mapCode + '下点位数量为空', 3)
                         }
                     } else {
                         this.loading = false
-                        this.$util.error(response.data.returnMsg, 3)
+                        this.$error(response.data.returnMsg, 3)
                     }
                 }).catch(err => {
                     this.loading = false
-                    this.$util.loginOut()
+                    this.$loginOut()
                 })
             },
             createNodeList(dataList) {
@@ -1203,7 +1203,7 @@
                         }
                         // 连接成功回调
                         that.socket.onopen = function (e) {
-                            that.$util.success('WebSocket连接成功', 3)
+                            that.$success('WebSocket连接成功', 3)
                             that.notConnect = false
                             if (that.intervalTime) {
                                 clearInterval(that.intervalTime)
@@ -1233,12 +1233,12 @@
                         };
                         // 连接失败回调
                         that.socket.onerror = function (ev) {
-                            that.$util.warn('WebSocket建立连接失败', 3)
+                            that.$warn('WebSocket建立连接失败', 3)
                             that.notConnect = true
                             console.log('建立连接失败');
                         };
                     } else {
-                        that.$util.warn('当前浏览器不支持WebSocket', 3)
+                        that.$warn('当前浏览器不支持WebSocket', 3)
                         console.log('当前浏览器不支持WebSocket');
                     }
                 }
@@ -1522,7 +1522,6 @@
             interval(newVal, oldVal) {
                 if (newVal && newVal !== oldVal) {
                     this.robotTransfrom = false
-                    console.log('interval');
                     this.getAllNodeData()
                     if (this.showLockNode) {
                         this.getLockNode()

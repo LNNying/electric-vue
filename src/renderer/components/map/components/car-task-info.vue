@@ -36,7 +36,7 @@
     :data="dataList"
     height="calc(50vh - 200px)"
     border
-    style="width: 100%"
+    style="width: 100%;"
     size="mini"
     highlight-current-row
     :header-cell-style="headerCellStyle"
@@ -72,7 +72,15 @@
     components: {MenuContentLayoutTitle},
     props: {
       dataList: {
-        Array
+        Array,
+          default: () => [
+              {
+                  name: '32',
+                  mainTaskNum: '12',
+                  status: '12',
+                  battery: '12'
+              }
+          ]
       },
       dataItem: {
         String

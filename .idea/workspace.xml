@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729295d5-5591-4470-b476-8ad26c4d07cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/content-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/icon-title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/img0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/img10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/img30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/img50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/img75.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/components/map/components/map-collospe-menu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/components/map/components/node-task-info.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/components/map/components/task-info-list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/components/title/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/store/modules/task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/libs/minx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/components/home/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/home/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/libs/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/libs/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -106,17 +88,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="js" value="356" />
+          <entry key="js" value="499" />
           <entry key="json" value="2" />
-          <entry key="vue" value="1695" />
+          <entry key="vue" value="1866" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="356" />
+          <entry key="JavaScript" value="499" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Vue.js" value="1695" />
+          <entry key="Vue.js" value="1866" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -124,21 +106,21 @@
           <entry key="babelrc" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="icns" value="1" />
-          <entry key="js" value="11" />
+          <entry key="js" value="17" />
           <entry key="json" value="1" />
           <entry key="png" value="1" />
           <entry key="ts" value="3" />
-          <entry key="vue" value="11" />
+          <entry key="vue" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="2" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="11" />
+          <entry key="JavaScript" value="17" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="TypeScript" value="3" />
-          <entry key="Vue.js" value="11" />
+          <entry key="Vue.js" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -151,49 +133,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="712" column="12" selection-start-line="712" selection-start-column="12" selection-end-line="712" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3316">
-              <caret column="7" selection-start-column="7" selection-end-column="19" />
-              <folding>
-                <element signature="e#1581#1612#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/components/home/home.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-collospe-menu.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+            <state relative-caret-position="664">
+              <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="103" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#map-collospe-menu#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#Select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#map-collospe-menu#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -206,22 +149,69 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state relative-caret-position="1520">
+              <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="n#style#0;n#el-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1581#1612#0" expanded="true" />
+                <element signature="e#2021#2618#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/App.vue">
+        <entry file="file://$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="532">
+              <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-collospe-menu.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1311">
+              <caret line="39" column="14" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/node-task-info.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1463">
+              <caret line="77" column="23" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/task-info-list.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2527">
+              <caret line="133" column="23" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9462">
+              <caret line="702" column="30" selection-start-line="702" selection-start-column="30" selection-end-line="702" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/libs/minx.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="905">
+              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -229,8 +219,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/libs/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+            <state relative-caret-position="428">
+              <caret line="53" column="5" selection-start-line="49" selection-start-column="32" selection-end-line="53" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -270,6 +272,7 @@
       <find>Modal</find>
       <find>initializeVehicle</find>
       <find>map-content</find>
+      <find>whiteListedModules</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -282,7 +285,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/renderer/store/index.js" />
-        <option value="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" />
         <option value="$PROJECT_DIR$/src/main/index.js" />
         <option value="$PROJECT_DIR$/src/renderer/components/LandingPage.vue" />
         <option value="$PROJECT_DIR$/src/index.ejs" />
@@ -294,14 +296,17 @@
         <option value="$PROJECT_DIR$/src/renderer/store/modules/task.js" />
         <option value="$PROJECT_DIR$/src/renderer/components/map/components/node-task-info.vue" />
         <option value="$PROJECT_DIR$/src/renderer/components/map/components/task-info-list.vue" />
-        <option value="$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue" />
         <option value="$PROJECT_DIR$/src/renderer/libs/util.js" />
-        <option value="$PROJECT_DIR$/src/renderer/main.js" />
         <option value="$PROJECT_DIR$/src/renderer/components/map/components/map-collospe-menu.vue" />
         <option value="$PROJECT_DIR$/src/renderer/App.vue" />
-        <option value="$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue" />
         <option value="$PROJECT_DIR$/src/renderer/components/home/home.vue" />
+        <option value="$PROJECT_DIR$/src/renderer/libs/vue.minix.js" />
+        <option value="$PROJECT_DIR$/src/renderer/libs/minx.js" />
+        <option value="$PROJECT_DIR$/src/renderer/main.js" />
+        <option value="$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue" />
         <option value="$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue" />
+        <option value="$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue" />
+        <option value="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" />
       </list>
     </option>
   </component>
@@ -324,11 +329,11 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-342" />
+    <option name="y" value="-1449" />
+    <option name="width" value="2578" />
+    <option name="height" value="1408" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -342,6 +347,11 @@
             <path>
               <item name="electric-vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="electric-vue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electric-vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electric-vue" type="462c0819:PsiDirectoryNode" />
+              <item name=".electron-vue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="electric-vue" type="b2602c69:ProjectViewProjectNode" />
@@ -482,18 +492,18 @@
       <workItem from="1605237475818" duration="11405000" />
       <workItem from="1605257116686" duration="5098000" />
       <workItem from="1605442028680" duration="1577000" />
-      <workItem from="1605489386785" duration="5599000" />
+      <workItem from="1605489386785" duration="10131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27933000" />
+    <option name="totallyTimeSpent" value="32465000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-340" y="-1447" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20211361" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13820335" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -505,9 +515,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3282981" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.47801417" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.37663645" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -594,13 +604,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/icons/256x256.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/axios/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -712,58 +715,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/task-info-list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="133" column="23" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/node-task-info.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="77" column="23" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/libs/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3316">
-          <caret column="7" selection-start-column="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#1581#1612#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-collospe-menu.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -777,10 +732,91 @@
     <entry file="file://$PROJECT_DIR$/build/icons/icon.icns">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/assets/icon-title.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/libs/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="53" column="5" selection-start-line="49" selection-start-column="32" selection-end-line="53" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/libs/vue.minix.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/libs/minx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="905">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-collospe-menu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/node-task-info.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="77" column="23" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9462">
+          <caret line="702" column="30" selection-start-line="702" selection-start-column="30" selection-end-line="702" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/task-info-list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2527">
+          <caret line="133" column="23" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/car-task-info.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1520">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1581#1612#0" expanded="true" />
+            <element signature="e#2021#2618#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+        <state relative-caret-position="664">
+          <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="103" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#map-collospe-menu#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#Select#0;n#div#0;n#div#0;n#div#0;n#div#0;n#map-collospe-menu#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -788,16 +824,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#map-collospe-menu#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="e#14408#14469#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/assets/icon-title.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="712" column="12" selection-start-line="712" selection-start-column="12" selection-end-line="712" selection-end-column="12" />
         </state>
       </provider>
     </entry>

@@ -95,14 +95,15 @@
                         <!--:style="{marginLeft: index === 0 ? 0 : `2px`}" :key="index"-->
                         <!--@click="clickFloor(index + 1)">{{index + 1}}层-->
                         <!--</Button>-->
-                        <Button class="button-space" size="small" type="primary" :disabled="interval > 30"
+                        <Button class="button-space" size="small" type="primary" :disabled="interval > 20"
                                 @click="scale('1')"
                                 icon="ios-add-circle">放大
                         </Button>
-                        <Button class="button-space" size="small" type="primary" :disabled="interval <= 7"
+                        <Button class="button-space" size="small" type="primary" :disabled="interval <= 10"
                                 @click="scale('0')"
                                 icon="md-remove-circle">缩小
                         </Button>
+                        <Button class="button-space" size="small" type="primary" @click="" >旋转</Button>
                         <Select class="lnn-select-copy button-space" size="small" style="width: 70px;"
                                 v-model="selectType"
                                 @on-change="changeQuery">
@@ -331,7 +332,7 @@
                 placeholder: '请输入设备编号',
                 queryInfo: '', // 查询内容
                 saveLoading: false,
-                interval: 7,
+                interval: 10,
                 isSave: false,
                 webInfo: [],
                 floorNum: 1,
@@ -366,12 +367,12 @@
             // 放大缩小
             scale(val) {
                 if (val === '1') { // 放大
-                    if (this.interval <= 30) {
+                    if (this.interval <= 20) {
                         this.interval += 5
                     }
                 } else { // 缩小
-                    if (this.interval <= 7) {
-                        this.interval = 7
+                    if (this.interval <= 10) {
+                        this.interval = 10
                         return
                     }
                     this.interval -= 5
@@ -400,8 +401,8 @@
             },
             // 功能
             clickFooterBtn(val) {
-                if (this.$util.isEmpty(this.carNo)) {
-                    this.$util.warn('选择要操作的小车', 3)
+                if (this.$isEmpty(this.carNo)) {
+                    this.$warn('选择要操作的小车', 3)
                     return
                 }
                 switch (val) {
@@ -459,10 +460,10 @@
                     if (response.data.returnData) {
                         this.$util.success(successMsg, 3)
                     } else {
-                        this.$util.error(errMsg, 3)
+                        this.$error(errMsg, 3)
                     }
                 }).catch(err => {
-                    this.$util.loginOut()
+                    this.$loginOut()
                 })
             },
             changeQuery() {
@@ -489,7 +490,7 @@
                 document.execCommand('Copy') // 执行浏览器复制命令
                 oInput.className = 'oInput'
                 oInput.style.display = 'none'
-                this.$util.success('复制成功')
+                this.$success('复制成功')
             },
             // clickFloor(floorNum) {
             //   this.floorNum = floorNum
@@ -578,10 +579,10 @@
                         this.carInfo.x = data.x
                         this.carInfo.y = data.y
                     } else {
-                        this.$util.warn(response.data.returnMsg, 3)
+                        this.$warn(response.data.returnMsg, 3)
                     }
                 }).catch(err => {
-                    this.$util.loginOut()
+                    this.$loginOut()
                 })
             },
             getNodeTask(node) {
@@ -593,10 +594,10 @@
                             this.infoShow = true
                         }
                     } else {
-                        this.$util.error(response.data.returnMsg, 3)
+                        this.$error(response.data.returnMsg, 3)
                     }
                 }).catch(err => {
-                    this.$util.loginOut()
+                    this.$loginOut()
                 })
             },
             // 接收点击数据
@@ -648,10 +649,10 @@
                         this.getNodeLayerCode(this.mapCode)
                         this.getAllUseRgv()
                     } else {
-                        this.$util.error(response.data.returnMsg, 3)
+                        this.$error(response.data.returnMsg, 3)
                     }
                 }).catch(err => {
-                    this.$util.loginOut()
+                    this.$loginOut()
                 })
             },
             getNodeLayerCode(mapCode) {
@@ -663,10 +664,10 @@
                     if (response.data.returnCode === 200) {
                         this.floorList = response.data.returnData
                     } else {
-                        this.$util.error(response.data.returnMsg, 3)
+                        this.$error(response.data.returnMsg, 3)
                     }
                 }).catch(err => {
-                    this.$util.loginOut()
+                    this.$loginOut()
                 })
             },
             getOperTypeList() {
@@ -674,11 +675,10 @@
                     if (response.data.returnCode === 200) {
                         this.operTypeList = response.data.returnData
                     } else {
-                        this.$u
-                            .error(response.data.returnMsg, 3)
+                        this.$error(response.data.returnMsg, 3)
                     }
                 }).catch(err => {
-                    this.$util.loginOut()
+                    this.$loginOut()
                 })
             },
             getSelectType() {
@@ -686,10 +686,10 @@
                     if (response.data.returnCode === 200) {
                         this.selectTypeList = response.data.returnData
                     } else {
-                        this.$util.error(response.data.returnMsg, 3)
+                        this.$error(response.data.returnMsg, 3)
                     }
                 }).catch(err => {
-                    this.$util.loginOut()
+                    this.$loginOut()
                 })
             },
             // 获取地图小车
@@ -702,10 +702,10 @@
                         this.allCarNum = response.data.returnData.length
                         this.allCarList = response.data.returnData
                     } else {
-                        this.$util.error(response.data.returnMsg, 3)
+                        this.$error(response.data.returnMsg, 3)
                     }
                 }).catch(err => {
-                    this.$util.loginOut()
+                    this.$.loginOut()
                 })
             },
             onHide() {
