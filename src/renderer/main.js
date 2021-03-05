@@ -16,8 +16,12 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'));
 Vue.http = Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
 Vue.prototype.$util = util;
-Vue.prototype.$address = 'http://27.223.104.6:48087';
-Vue.prototype.$socketUrl = 'ws://27.223.104.6:49003/websocket';
+// rgv
+Vue.prototype.$address = 'http://192.168.102.125:8099';
+Vue.prototype.$socketUrl = 'ws://192.168.102.125:8099/websocket';
+// stacker
+Vue.prototype.$stacker = 'http://localhost:8087';
+Vue.prototype.$stacketSocketUrl = 'ws://localhost:8087/deviceInfoPush';
 Vue.directive('clickoutside', Clickoutside);
 /* eslint-disable no-new */
 new Vue({

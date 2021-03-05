@@ -15,6 +15,11 @@ export default new Router({
         name: 'home',
         component: require('@/components/home/home').default
     },
+      {
+          path: '/stacker',
+          name: 'stacker',
+          component: require('@/components/stacker/stacker-map').default
+      },
     {
       path: '*',
       redirect: '/'

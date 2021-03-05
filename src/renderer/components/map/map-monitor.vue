@@ -332,7 +332,7 @@
                 placeholder: '请输入设备编号',
                 queryInfo: '', // 查询内容
                 saveLoading: false,
-                interval: 10,
+                interval: 8,
                 isSave: false,
                 webInfo: [],
                 floorNum: 1,

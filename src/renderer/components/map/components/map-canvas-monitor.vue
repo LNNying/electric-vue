@@ -94,7 +94,7 @@
                 <div :class="{'robot': true, 'robot-transform': robotTransfrom}" :key="index"
                      v-for="(item, index) in carList" :style="{ width: interval + 'px',
         height: interval + 'px', borderRadius: interval / 5 + 'px', background: '#ff7100',
-        top: ((2.1 *  interval / 1.01) * item['x'] + 1) + 'px', left: ((5 * interval / 2.5) * item['y'] + 1) + 'px'
+        top: ((2 *  interval) * item['x'] + 1) + 'px', left: ((2 * interval) * item['y'] + 1) + 'px'
       }" :ref="item.name" @click="onClickCar(item)" @dblclick="dbCar(item)">
                     <div class="dot" v-if="item['mainTaskNum']"
                          :style="{width: interval/2+'px', height: interval/2+'px'}"></div>
@@ -287,7 +287,7 @@
             clickView(e) {
                 // x, y 有时会多0.5   判断x, y不能同时都多0.5
                 let x = Math.floor(((e.offsetX - this.viewerInfo.x) / (this.interval * 2))) // 点击处的坐标
-                let y = Math.floor(((e.offsetY - this.viewerInfo.y) / (this.interval * 5 / 2.4)))
+                let y = Math.floor(((e.offsetY - this.viewerInfo.y) / (this.interval * 2)))
                 let body = {
                     x: y,
                     y: x
@@ -335,7 +335,7 @@
                     }
                 }
                 let x = Math.floor(((e.offsetX - this.viewerInfo.x) / (this.interval * 2))) // 点击处的坐标
-                let y = Math.floor(((e.offsetY - this.viewerInfo.y) / (this.interval * 5 / 2.4)))
+                let y = Math.floor(((e.offsetY - this.viewerInfo.y) / (this.interval * 2)))
                 let body = {
                     x: y,
                     y: x
@@ -369,7 +369,7 @@
             drawImage(data, ctx, val) {
                 let type = data.type
                 let startX = (2 * this.interval) * data['y'] + 1
-                let startY = (5 * this.interval / 2.4) * data['x'] + 1
+                let startY = (2 * this.interval) * data['x'] + 1
                 if (val === 'map') {
                     switch (type) {
                         case 'P': // 货位

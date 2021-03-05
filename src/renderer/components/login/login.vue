@@ -20,6 +20,12 @@
                             </template>
                         </Input>
                     </FormItem>
+                    <FormItem prop="password">
+                        <Select size="large" placeholder="请选择进入类型" v-model="loginForm.type">
+                            <Option value="stacker">STACKER</Option>
+                            <Option value="rgv">RGV</Option>
+                        </Select>
+                    </FormItem>
                 </Form>
             </div>
             <div class="lnn-login-btn">
@@ -41,6 +47,9 @@
                     ],
                     password: [
                         {required: true, message: '请输入密码', trigger: 'blur'}
+                    ],
+                    type: [
+                        {required: true, message: '请选择进入类型', trigger: 'change', type: 'string'}
                     ]
                 }
             }
@@ -53,10 +62,16 @@
                             title: '登录成功',
                             desc: '登录成功',
                             duration: 5
-                        })
-                        this.$router.push({
-                            name: 'home'
-                        })
+                        });
+                        if (this.loginForm.type === 'stacker') {
+                            this.$router.push({
+                                name: 'stacker'
+                            })
+                        } else {
+                            this.$router.push({
+                                name: 'home'
+                            })
+                        }
                     }
                 })
             }
@@ -79,7 +94,7 @@
 
     .lnn-login-contain .lnn-login {
         width: 400px;
-        height: 300px;
+        height: 350px;
         background: rgb(255, 255, 255);
         /*opacity: .5;*/
         border-radius: 5px 5px;
