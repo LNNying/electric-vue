@@ -1,15 +1,151 @@
 <template>
     <div class="lnn-stacker-map-outer" ref="scroll">
-        <div class="lnn-floor">
-            <div class="lnn-floor-outer">
-                <div ref="floor" class="lnn-floor-num" v-for="(item, index) in floorList" :key="index" @click="clickFloor(item)">{{item + 'F'}}</div>
+        <div style="position: fixed;right: 2px;top: 2px;">
+            <Button size="small" type="success" @click="exitSys">退出系统</Button>
+        </div>
+        <div class="lnn-tip-info">
+            <div class="lnn-task-info">
+                <p>任务总数&nbsp;&nbsp;<span>{{infoObj.taskNum}}</span></p>
+                <p>查看详情>>></p>
+            </div>
+            <div class="lnn-warn-info">
+                <p>告警信息</p>
+                <p>查看详情>>></p>
             </div>
         </div>
+        <!--操作界面-->
+        <div  class="lnn-oper">
+            <div class="lnn-state">
+                <div :style="{backgroundColor: 'green'}"></div>
+                <div>在线&nbsp;&nbsp;设备编号&nbsp;{{handleInfoData(clickCarObj.code)}}</div>
+            </div>
+            <div class="lnn-close" @click="closeInfo"></div>
+            <div class="lnn-oper-info">
+                <div class="lnn-ele">
+                    <img src="../../assets/ele.png" style="width: 76px;height: 137px">
+                    <div style="font-size: 24px; color: rgb(84, 213, 149);">&nbsp;70%</div>
+                    <div style="font-size: 12px; color: rgb(46,55,213);">&nbsp;&nbsp;剩余电量</div>
+                </div>
+                <div class="lnn-starker-info" style="text-align: center">
+                    <Row :gutter="5" style="margin-top: 10px">
+                        <i-col span="6"><span class="botton-border">设备IP</span></i-col>
+                        <i-col span="6"><span class="botton-border">执行状态</span></i-col>
+                        <i-col span="6"><span class="botton-border">res状态</span></i-col>
+                        <i-col span="6"><span class="botton-border">process状态</span></i-col>
+                    </Row>
+                    <Row :gutter="5" style="margin-top: 10px; text-align: center">
+                        <i-col span="6">{{handleInfoData(clickCarObj.ip)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.state)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.resState)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.processState)}}</i-col>
+                    </Row>
+                    <Row :gutter="5" style="margin-top: 30px; text-align: center">
+                        <i-col span="6"><span class="botton-border">设备名称</span></i-col>
+                        <i-col span="6"><span class="botton-border">托盘编号</span></i-col>
+                        <i-col span="6"><span class="botton-border">起始位置</span></i-col>
+                        <i-col span="6"><span class="botton-border">目标位置</span></i-col>
+                    </Row>
+                    <Row :gutter="5" style="margin-top: 10px; text-align: center">
+                        <i-col span="6">{{handleInfoData(clickCarObj.name)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.traceCode)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.startPoint)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.endPoint)}}</i-col>
+                    </Row>
+                    <Row :gutter="5" style="margin-top: 30px; text-align: center">
+                        <i-col span="6"><span class="botton-border">点位条码</span></i-col>
+                        <i-col span="6"><span class="botton-border">托盘状态</span></i-col>
+                        <i-col span="6"><span class="botton-border">是否可用</span></i-col>
+                        <i-col span="6"><span class="botton-border">任务编号</span></i-col>
+                    </Row>
+                    <Row :gutter="5" style="margin-top: 10px; text-align: center">
+                        <i-col span="6">{{handleInfoData(clickCarObj.nodeCode)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.traceState)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.enableFlag)}}</i-col>
+                        <i-col span="6">{{handleInfoData(clickCarObj.taskNo)}}</i-col>
+                    </Row>
+                </div>
+            </div>
+            <div class="lnn-oper-but">
+                <Row :gutter="5" style="margin-top: 10px;text-align: center">
+                    <i-col span="6">
+                        <Button size="small" type="success">车体恢复</Button>
+                    </i-col>
+                    <i-col span="6">
+                        <Button size="small" type="success">同步设备位置</Button>
+                    </i-col>
+                    <i-col span="6">
+                        <Button size="small" type="success">同步设备位置</Button>
+                    </i-col>
+                    <i-col span="6">
+                        <Button size="small" type="success">同步设备位置</Button>
+                    </i-col>
+                </Row>
+                <Row :gutter="5" style="margin-top: 20px; text-align: center">
+                    <i-col span="6">
+                        <Button size="small" type="success">车体恢复</Button>
+                    </i-col>
+                    <i-col span="6">
+                        <Button size="small" type="success">同步设备位置</Button>
+                    </i-col>
+                    <i-col span="6">
+                        <Button size="small" type="success">同步设备位置</Button>
+                    </i-col>
+                    <i-col span="6">
+                        <Button size="small" type="success">同步设备位置</Button>
+                    </i-col>
+                </Row>
+            </div>
+            <div class="lnn-oper-inp">
+                <Row :gutter="5" style="text-align: center">
+                    <i-col span="7">
+                        <Input size="small" placeholder="输入起点"></Input>
+                    </i-col>
+                    <i-col span="7">
+                        <Input size="small" placeholder="输入终点"></Input>
+                    </i-col>
+                    <i-col span="7">
+                        <Input size="small" placeholder="输入托盘号"></Input>
+                    </i-col>
+                    <i-col span="3">
+                        <Button size="small" type="primary">入库</Button>
+                    </i-col>
+                </Row>
+                <Row :gutter="5" style="text-align: center;margin-top: 20px">
+                    <i-col span="7">
+                        <Input size="small" placeholder="输入起点"></Input>
+                    </i-col>
+                    <i-col span="7">
+                        <Input size="small" placeholder="输入终点"></Input>
+                    </i-col>
+                    <i-col span="7">
+                        <Input size="small" placeholder="输入托盘号"></Input>
+                    </i-col>
+                    <i-col span="3">
+                        <Button size="small" type="primary">出库</Button>
+                    </i-col>
+                </Row>
+                <Row :gutter="5" style="text-align: center;margin-top: 20px">
+                    <i-col span="7">
+                        <Input size="small" placeholder="选择坐标"></Input>
+                    </i-col>
+                    <i-col span="3">
+                        <Button size="small" type="primary">移动</Button>
+                    </i-col>
+                </Row>
+            </div>
+        </div>
+        <div class="lnn-floor">
+            <div class="lnn-floor-outer">
+                <div ref="floor" class="lnn-floor-num" v-for="(item, index) in floorList" :style="{backgroundColor: item == floorNum ? '#ffbd13' : '#46e0f9'}"
+                     :key="index" @click="clickFloor(item)">{{item + 'F'}}</div>
+            </div>
+        </div>
+        <!--地图-->
         <div v-loading="loading" :style="{position: 'absolute', width: width * interval + 'px', height: interval * height + 'px', zIndex: 200, left: mapOffset.x + 'px'}" @mousedown="down">
             <div class="lnn-stacker-car-outer" :style="{transform: `translate(0,${ height * interval})`,width: width * interval + 'px', height: interval * height + 'px'}">
                 <div :class="{'lnn-stacker-car': true, 'robot-transform': robotTransfrom}" v-for="(item, index) in carList" :key="index"
                      :style="{top: item['ly'] * interval * offset + 'px', left: item['lx'] * interval * offset + 'px',
-            width: interval + 'px', height: interval + 'px'}" @click="clickCar(item)" :ref="item.id"></div>
+            width: interval + 'px', height: interval + 'px'}" @click="clickCar(item)" :ref="item.code"></div>
             </div>
         </div>
         <canvas id="router" :width="width * interval" :height="interval * height" :style="{left: mapOffset.x + 'px'}"></canvas>
@@ -26,11 +162,16 @@
         name: "stacker-map",
         data() {
             return {
+                infoObj: {
+                    taskNum: 20,
+                },
+                showInfo: false,
                 trackList: [3, 8, 13, 18, 23, 32, 37, 42, 47, 52],
                 floorNum: 1,
-                floorList: [1, 2,3,4,5,6],
+                floorList: [],
+                clickCarObj: {},
                 mapCode: 1,
-                width: 90,
+                width: 64,
                 height: 85,
                 interval: 15,
                 offset: 1.1,
@@ -58,20 +199,53 @@
                     x: 60
                 },
                 url: {
-                    getNodeUrl: this.$stacker + '/stackerNode/getNodeData'
+                    getNodeUrl: this.$stacker + '/stackerNode/getNodeData',
+                    getFloorUrl: this.$stacker + '/stackerNode/getFloorNum'
                 }
             }
         },
         methods: {
+            handleInfoData(info) {
+                return typeof info === 'undefined' || info === null || info === '' ? '--' : info;
+            },
+            closeInfo() {
+                this.showInfo = true;
+            },
+            exitSys() {
+                this.$Modal.confirm({
+                    title: '提示',
+                    content: '是否退出系统？',
+                    onOk: () => {
+                        this.$router.push({
+                            name: 'login'
+                        });
+                        this.$Notice.success({
+                            title: '提示',
+                            desc: '退出成功',
+                            duration: 5
+                        });
+                    },
+                    onCancel: () => {
+                        return false
+                    }
+                })
+            },
             // 点击楼层
             clickFloor(floorNum) {
+                if (floorNum == this.floorNum) {
+                    return
+                }
                 this.floorNum = floorNum;
                 this.getNodeData();
+                this.structureGood(this.goodObj);
+                this.structureRouter(this.routerObj);
+                this.stackerFrameCan.clearRect(0, 0, this.stackerFrameDom.width, this.stackerFrameDom.height);
             },
             // 点击小车
             clickCar(car) {
+                this.clickCarObj = car;
                 this.clearCarBck();
-                this.$refs[car.id][0].style.boxShadow = '-1px -1px 10px 4px #d80304';
+                this.$refs[car.code][0].style.boxShadow = '-1px -1px 10px 4px #d80304';
             },
             // 点击
             down(event) {
@@ -95,7 +269,7 @@
             clearCarBck () {
                 if (this.carList.length > 0) {
                     for (let i = 0; i < this.carList.length; i++) {
-                        this.$refs[this.carList[i].id][0].style.boxShadow = ''
+                        this.$refs[this.carList[i].code][0].style.boxShadow = ''
                     }
                 }
             },
@@ -154,7 +328,7 @@
                 for (let item in data) {
                     let info = data[item];
                     let obj = {};
-                    if (info.taskType !== '' && !!info.taskType) {
+                    if (info.taskType !== '' && !!info.taskType && info.z == this.floorNum) {
                         obj.carX = info['x'] * this.interval * this.offset;
                         obj.startX = info['startX'] * this.interval * this.offset;
                         obj.startY = info['startY'] * this.interval * this.offset;
@@ -169,7 +343,9 @@
             structureGood(obj) {
                 this.goodCan.clearRect(0, 0, this.goodDom.width, this.goodDom.height);
                 for (let item in obj) {
-                    this.drawMap(obj[item], this.goodCan, 'good')
+                    if (obj[item].z == this.floorNum) {
+                        this.drawMap(obj[item], this.goodCan, 'good')
+                    }
                 }
             },
             // 画轨道
@@ -193,7 +369,7 @@
                 } else {
                     switch (data.type) {
                         case '0': //储位
-                            this.drawRect(startX, startY, this.interval, this.interval, ctx, 'rgb(6, 74, 191)', 'rgb(134, 221, 255)', '0');
+                            this.drawStorage(startX, startY, this.interval, this.interval, ctx, '#50babe', 'rgb(134, 221, 255)',);
                             break;
                         case '1': //通用站台
                             this.drawRect(startX, startY, this.interval, this.interval, ctx, 'skyblue', 'rgb(59, 223, 255)');
@@ -223,7 +399,6 @@
                             console.log('错误类型' + type);
                             break
                     }
-                    this.loading = false;
                 }
             },
             jsonToArray(obj) {
@@ -232,9 +407,6 @@
                     arr.push(obj[item]);
                 }
                 return arr;
-            },
-            getCurrentFloorData(data) {
-                return data.filter(item => item.lz == this.floorNum);
             },
             handleGood(goodList) {
                 for (let i = 0, len = goodList.length; i < len; i++) {
@@ -265,11 +437,12 @@
                     if (!!Object.keys(msg.stackInfo).length) {
                         let stackerInfo = msg.stackInfo;
                         // 处理堆垛机
-                        this.carCloneList[stackerInfo.id] = stackerInfo;
+                        this.carCloneList[stackerInfo.code] = stackerInfo;
                         this.carList = this.jsonToArray(this.carCloneList);
-                        this.routerObj[stackerInfo.id] = {
-                            id: stackerInfo.id,
+                        this.routerObj[stackerInfo.code] = {
+                            code: stackerInfo.code,
                             x: stackerInfo.lx,
+                            z: stackerInfo.lz,
                             startX: stackerInfo.loadLx,
                             startY: stackerInfo.loadLy,
                             endX: stackerInfo.dischargeLx,
@@ -282,7 +455,7 @@
                     }
                 } else if (typeof msg.goodInfo !== 'undefined') {
                     if (!!msg.goodInfo.length) {
-                        this.handleGood(this.getCurrentFloorData(msg.goodInfo));
+                        this.handleGood(msg.goodInfo);
 
                     } else {
                         console.log('货物推送信息为空');
@@ -379,6 +552,9 @@
                         this.nodeList = response.data.returnData;
                         this.structureMap(_.cloneDeep(this.nodeList));
                         this.simulationClick();
+                        setTimeout(() => {
+                            this.loading = false;
+                        }, 1000)
                     } else {
                         this.$error(response.data.returnMsg, 3);
                     }
@@ -388,15 +564,41 @@
                     this.$loginOut();
                 })
             },
+            // 获取楼层
+            getFloorNumList() {
+                this.$http.post(this.url.getFloorUrl, this.mapCode).then(response => {
+                    if (response.data.returnCode === 200) {
+                        this.floorList = response.data.returnData;
+                    } else {
+                        this.$error(response.data.returnMsg, 3);
+                    }
+                }).catch(err => {
+                    console.log(err);
+                    this.$loginOut();
+                })
+            },
             // 绘制货物
             drawGood(x, y, w, h, ctx, fillColor, strokeColor) {
                 ctx.save();
                 let gradient = ctx.createLinearGradient(x, y, x, y + h);
-                gradient.addColorStop(1, '#c0ffe3');
-                gradient.addColorStop(0.5, '#68ffc6');
-                gradient.addColorStop(0.25, '#3cffb5');
-                gradient.addColorStop(0, '#0cff63');
+                gradient.addColorStop(1, '#8bbbff');
+                gradient.addColorStop(0.5, '#5592ff');
+                gradient.addColorStop(0.25, '#498dff');
+                gradient.addColorStop(0, '#094dff');
                 ctx.fillStyle = gradient;
+                ctx.strokeStyle = strokeColor;
+                ctx.fillRect(x, y, w, h);
+                ctx.stroke();
+                ctx.restore();
+            },
+            // 存储区
+            drawStorage(x, y, w, h, ctx, fillColor, strokeColor) {
+                ctx.save();
+                // ctx.moveTo(x, y);
+                // ctx.lineTo(x + w, y + h);
+                // ctx.moveTo(x + w, y);
+                // ctx.lineTo(x, y + h);
+                ctx.fillStyle = fillColor;
                 ctx.strokeStyle = strokeColor;
                 ctx.fillRect(x, y, w, h);
                 ctx.stroke();
@@ -405,12 +607,6 @@
             // 绘制方格
             drawRect(x, y, w, h, ctx, fillColor, strokeColor, type) {
                 ctx.save();
-                if (type === '0') {
-                    ctx.moveTo(x, y);
-                    ctx.lineTo(x + w, y + h);
-                    ctx.moveTo(x + w, y);
-                    ctx.lineTo(x, y + h);
-                }
                 if (type !== '9') {
                     ctx.fillStyle = fillColor;
                 }
@@ -431,14 +627,14 @@
                 ctx.save();
                 ctx.fillStyle = fillColor;
                 ctx.strokeStyle = strokeColor;
-                if (nodeDirection == 1) { // top
+                if (nodeDirection == 'Y+') { // top
                     y = y - h * (Number(nodeSpan) - 1);
                     h = Number(nodeSpan) * h;
-                } else if (nodeDirection == 2) { // right
+                } else if (nodeDirection == 'X+') { // right
                     w = Number(nodeSpan) * w
-                } else if (nodeDirection == 3) { // bottom
+                } else if (nodeDirection == 'Y-') { // bottom
                     h = Number(nodeSpan) * h;
-                } else if (nodeDirection == 4) { // left
+                } else if (nodeDirection == 'X-') { // left
                     w = Number(nodeSpan) * w;
                     x = x + w * (Number(nodeSpan) - 1);
                 }
@@ -509,6 +705,7 @@
                 this.getCanvas('good', 'goodDom', 'goodCan');
                 this.$refs.scroll.scrollTo(0, this.stackerDom.height);
                 this.getNodeData();
+                this.getFloorNumList();
                 this.setWebSocket();
             });
             setInterval(() => {
@@ -519,98 +716,5 @@
 </script>
 
 <style scoped>
-    .lnn-up, .lnn-down {
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        line-height: 20px;
-        margin-left: 10px;
-    }
-    .lnn-floor-outer {
-        height: 300px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        overflow: scroll;
-    }
-    .lnn-floor-outer::-webkit-scrollbar {
-        width: 0 !important;
-        height: 0 !important;
-    }
-    .lnn-floor-num {
-        margin-top: 5px;
-        width: 100%;
-        height: 40px;
-        background: #46e0f9;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 50%;
-        color: #fff;
-    }
-    .lnn-floor {
-        position: fixed;
-        left: 10px;
-        top: 50%;
-        margin-top: -150px;
-        width: 40px;
-        height: 300px;
-        cursor: pointer;
-    }
-
-    .lnn-stacker-map-outer {
-        width: 100%;
-        height: calc(100vh);
-        background: rgba(2,19,45,.9);
-        overflow: scroll;
-        position: relative;
-    }
-
-    .lnn-stacker-map-outer::-webkit-scrollbar-thumb {
-        background-color: #a1a3a9;
-        border-radius: 3px;
-    }
-
-    .lnn-stacker-car-outer {
-        position: absolute;
-        transform: scale(1, -1);
-    }
-
-    .lnn-stacker-car {
-        position: absolute;
-        cursor: pointer;
-        z-index: 201;
-        border-radius: 2px 2px;
-        background: #ffbd15;
-        /*background-image: url(../../assets/stacker.png);*/
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .robot-transform {
-        transition: top 2.5s linear, left 2.5s linear;
-    }
-
-    #stacker {
-        position: absolute;
-        z-index: 100;
-    }
-
-    #stackerFrame {
-        position: absolute;
-        z-index:  101;
-    }
-
-    #good {
-        position: absolute;
-        z-index:  102;
-    }
-
-    #router{
-        position: absolute;
-        z-index:  103;
-    }
-
-    .lnn-stacker-map-outer::-webkit-scrollbar {
-        width: 5px !important;
-        height: 5px !important;
-    }
+@import "./index.less";
 </style>

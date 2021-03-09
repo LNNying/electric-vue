@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729295d5-5591-4470-b476-8ad26c4d07cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/stacker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/components/stacker/stacker-map.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/icons/ico.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/assets/ele.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/assets/error.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/assets/task.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/assets/warn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/components/stacker/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/components/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/login/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/components/stacker/stacker-map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/stacker/stacker-map.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -82,97 +83,160 @@
     <session id="565984642">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.0" value="5" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="js" value="588" />
-          <entry key="json" value="2" />
-          <entry key="vue" value="10330" />
+          <entry key="js" value="617" />
+          <entry key="json" value="6" />
+          <entry key="less" value="976" />
+          <entry key="vue" value="13575" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="588" />
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="617" />
+          <entry key="Less" value="976" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Vue.js" value="10330" />
+          <entry key="Vue.js" value="13575" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="babelrc" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="icns" value="1" />
-          <entry key="js" value="23" />
-          <entry key="json" value="2" />
+          <entry key="icns" value="2" />
+          <entry key="ico" value="1" />
+          <entry key="js" value="26" />
+          <entry key="json" value="4" />
+          <entry key="less" value="1" />
           <entry key="md" value="1" />
-          <entry key="png" value="1" />
-          <entry key="ts" value="3" />
-          <entry key="vue" value="27" />
+          <entry key="png" value="4" />
+          <entry key="ts" value="4" />
+          <entry key="vue" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="2" />
-          <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="23" />
+          <entry key="Image" value="7" />
+          <entry key="JSON" value="5" />
+          <entry key="JavaScript" value="26" />
+          <entry key="Less" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="TypeScript" value="3" />
-          <entry key="Vue.js" value="27" />
+          <entry key="TypeScript" value="4" />
+          <entry key="Vue.js" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="2" />
+          <entry key="TypeScriptServerServiceImpl" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/components/stacker/stacker-map.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="511" column="36" selection-start-line="511" selection-start-column="36" selection-end-line="511" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="458" column="42" selection-start-line="458" selection-start-column="16" selection-end-line="458" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+            <state relative-caret-position="342">
+              <caret line="18" column="53" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="53" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#162#168#0" expanded="true" />
+                <element signature="e#168#174#0" expanded="true" />
+                <element signature="e#772#778#0" expanded="true" />
+                <element signature="e#778#784#0" expanded="true" />
+                <element signature="e#738#744#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1066#1072#0" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1158#1164#0" expanded="true" />
+                <element signature="e#1164#1170#0" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#0;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#1;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#2;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#3;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#4;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#5;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#0;n#div#3;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#1;n#div#3;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#0;n#div#4;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#1;n#div#4;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#Row#2;n#div#4;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue">
+        <entry file="file://$PROJECT_DIR$/src/renderer/assets/ele.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/stacker/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3876">
-              <caret line="204" column="16" selection-start-line="204" selection-start-column="16" selection-end-line="204" selection-end-column="16" />
+            <state relative-caret-position="-3705">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/assets/task.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/login/login.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/icons/256x256.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/icons/icon.icns">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/icons/icon.ico">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -184,22 +248,12 @@
       <list>
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="Less File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getNodeList</find>
-      <find>getAllLockNode</find>
-      <find>$error</find>
-      <find>mapState</find>
-      <find>initCarData</find>
-      <find>button-space</find>
-      <find>showMenu</find>
-      <find>right-content</find>
-      <find>Modal</find>
-      <find>initializeVehicle</find>
-      <find>map-content</find>
       <find>whiteListedModules</find>
       <find>interval</find>
       <find>stackerFrameCan</find>
@@ -207,7 +261,6 @@
       <find>connNum</find>
       <find>drawWorkLine</find>
       <find>carList</find>
-      <find>structureGood</find>
       <find>goodDom</find>
       <find>goodObj</find>
       <find>drawGood</find>
@@ -218,7 +271,19 @@
       <find>clickFloor</find>
       <find>drawMap</find>
       <find>structureMap</find>
+      <find>setWebSocket</find>
+      <find>drawRect</find>
+      <find>drawStorage</find>
+      <find>structureGood</find>
+      <find>id</find>
+      <find>floorList</find>
+      <find>getNodeUrl</find>
+      <find>getNodeData</find>
+      <find>lnn-floor</find>
+      <find>lnn-info</find>
+      <find>lnn-tip-info</find>
       <find>loading</find>
+      <find>icon</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -231,11 +296,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/renderer/store/index.js" />
-        <option value="$PROJECT_DIR$/src/main/index.js" />
         <option value="$PROJECT_DIR$/src/renderer/components/LandingPage.vue" />
         <option value="$PROJECT_DIR$/src/index.ejs" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/renderer/store/modules/task.vue" />
         <option value="$PROJECT_DIR$/src/renderer/store/modules/task.js" />
         <option value="$PROJECT_DIR$/src/renderer/components/map/components/node-task-info.vue" />
@@ -251,9 +314,12 @@
         <option value="$PROJECT_DIR$/src/renderer/components/map/components/map-canvas-monitor.vue" />
         <option value="$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue" />
         <option value="$PROJECT_DIR$/src/renderer/router/index.js" />
-        <option value="$PROJECT_DIR$/src/renderer/components/login/login.vue" />
         <option value="$PROJECT_DIR$/src/renderer/main.js" />
+        <option value="$PROJECT_DIR$/src/main/index.js" />
+        <option value="$PROJECT_DIR$/src/renderer/components/stacker/index.less" />
         <option value="$PROJECT_DIR$/src/renderer/components/stacker/stacker-map.vue" />
+        <option value="$PROJECT_DIR$/src/renderer/components/login/login.vue" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -277,17 +343,16 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-342" />
+    <option name="y" value="-1449" />
+    <option name="width" value="2578" />
+    <option name="height" value="1408" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,6 +369,12 @@
               <item name="electric-vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="electric-vue" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electric-vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electric-vue" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="electric-vue" type="b2602c69:ProjectViewProjectNode" />
@@ -387,11 +458,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -399,11 +472,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\electric-vue\build\icons" />
       <recent name="D:\project\electric-vue\src\renderer\assets" />
       <recent name="D:\project\electric-vue\src\renderer\components\title" />
       <recent name="D:\project\electric-vue\src\renderer\components\map\components" />
       <recent name="D:\project\electric-vue\src\renderer\components\map" />
-      <recent name="D:\project\other\electron-vue\electron-vue-start\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -437,17 +510,21 @@
       <workItem from="1614761419607" duration="242000" />
       <workItem from="1614761851818" duration="11000" />
       <workItem from="1614824448702" duration="17075000" />
-      <workItem from="1614908296808" duration="13858000" />
+      <workItem from="1614908296808" duration="14349000" />
+      <workItem from="1614929456395" duration="3300000" />
+      <workItem from="1614998544352" duration="289000" />
+      <workItem from="1615264105859" duration="13246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67271000" />
+    <option name="totallyTimeSpent" value="84597000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-340" y="-1447" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18560106" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2023692" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -461,7 +538,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3282981" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.46241134" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.46223566" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -505,9 +582,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/icons/icon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.electron-vue/build.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1947" />
@@ -531,18 +605,8 @@
         <state relative-caret-position="-2118" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/electron/electron.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="1252" column="4" selection-start-line="1252" selection-start-column="4" selection-end-line="1252" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/electron/index.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/icons/256x256.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/axios/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -562,16 +626,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/LandingPage.vue" />
-    <entry file="file://$PROJECT_DIR$/src/main/index.dev.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/vue-axios/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor" />
@@ -615,9 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/icons/icon.icns">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/assets/icon-title.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -660,13 +711,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -702,20 +746,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/login/login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#Button#0;n#div#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/libs/minx.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8474">
+          <caret line="458" column="42" selection-start-line="458" selection-start-column="16" selection-end-line="458" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -726,16 +767,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/map/map-monitor.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="458" column="42" selection-start-line="458" selection-start-column="16" selection-end-line="458" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="394">
           <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -743,10 +777,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/index.dev.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/electron/electron.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="2586" column="4" selection-start-line="2586" selection-start-column="4" selection-end-line="2586" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/assets/task.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/assets/ele.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/stacker/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3705">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/stacker/stacker-map.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="511" column="36" selection-start-line="511" selection-start-column="36" selection-end-line="511" selection-end-column="36" />
+        <state relative-caret-position="342">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#162#168#0" expanded="true" />
+            <element signature="e#168#174#0" expanded="true" />
+            <element signature="e#772#778#0" expanded="true" />
+            <element signature="e#778#784#0" expanded="true" />
+            <element signature="e#738#744#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1066#1072#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1158#1164#0" expanded="true" />
+            <element signature="e#1164#1170#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#0;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#1;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#2;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#3;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#4;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#5;n#div#1;n#div#2;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#0;n#div#3;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#1;n#div#3;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#0;n#div#4;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#1;n#div#4;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Row#2;n#div#4;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/login/login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/icons/256x256.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/icons/icon.icns">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/icons/icon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
         </state>
       </provider>
     </entry>

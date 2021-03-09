@@ -13,14 +13,22 @@ const winURL = process.env.NODE_ENV === 'development'
   ? `http://localhost:9080`
   : `file://${__dirname}/index.html`
 
+// 屏幕大小
 function createWindow () {
   /**
    * Initial window options
    */
-  mainWindow = new BrowserWindow({
-    height: 563,
+    let size = require('electron').screen.getPrimaryDisplay().workAreaSize;
+    let width = parseInt(size.width);
+
+    console.log(width)
+    mainWindow = new BrowserWindow({
+    height: width,
     useContentSize: true,
-    width: 1000
+    // fullscreenable: true,
+    // fullscreen: true,
+    // autoHideMenuBar: false
+    width: width
   })
 
   mainWindow.loadURL(winURL)

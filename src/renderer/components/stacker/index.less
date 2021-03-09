@@ -1,0 +1,234 @@
+.botton-border {
+  border-bottom: 1px solid rgba(238, 238,238,.3);
+}
+.lnn-oper {
+  position: fixed;
+  right: 10px;
+  top: 140px;
+  width: 500px;
+  height: 540px;
+  border: 1px solid #73d1ff;
+  box-shadow: 0 0 25px 2px #73d1ff inset;
+  background: rgb(27, 42, 66);
+  border-radius: 5px;
+}
+.lnn-state {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 10px;
+  color: #fff;
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+}
+.lnn-state div{
+  position: absolute;
+}
+.lnn-state div:nth-child(1) {
+  width: 10px;
+  height: 10px;
+  top: 3px;
+  border-radius: 50%;
+}
+.lnn-state div:nth-child(2) {
+  left: 15px;
+}
+.lnn-close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: rgb(59, 223, 255);
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  background: url(../../assets/error.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.lnn-oper-info {
+  position: absolute;
+  top: 40px;
+  width: 480px;
+  left: 10px;
+  margin-top: 10px;
+  height: 230px;
+}
+.lnn-ele {
+  position: absolute;
+  width: 120px;
+  height: 210px;
+  top: 10px;
+  left: 5px;
+  text-align: center;
+}
+
+.lnn-starker-info {
+  position: absolute;
+  width: 340px;
+  height: 100%;
+  right: 0;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.lnn-oper-but {
+  position: absolute;
+  top: 280px;
+  width: 480px;
+  left: 10px;
+  margin-top: 10px;
+  height: 100px;
+}
+
+.lnn-oper-inp {
+  position: absolute;
+  top: 390px;
+  width: 480px;
+  left: 10px;
+  margin-top: 10px;
+  height: 180px;
+}
+
+
+.lnn-tip-info {
+  position: fixed;
+  width: 500px;
+  top: 30px;
+  right: 10px;
+  z-index: 200;
+  height: 97.5px;
+}
+.lnn-warn-info {
+  width: 103px;
+  height: 97.5px;
+  position: absolute;
+  right: 0;
+  background: url(../../assets/warn.png);
+  background-size: cover;
+}
+.lnn-task-info {
+  width: 103px;
+  height: 97.5px;
+  position: absolute;
+  background: url(../../assets/task.png);
+  background-size: cover;
+}
+.lnn-task-info p, .lnn-warn-info p {
+  color: #2db3ff;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 55px;
+}
+.lnn-warn-info p {
+  margin-top: 60px;
+  color: rgb(143, 19, 44);
+}
+.lnn-task-info p span {
+  font-size: 14px;
+}
+.lnn-task-info p:nth-child(2) {
+  font-size: 8px;
+  margin-top: 2px;
+  color: #fff;
+}
+.lnn-warn-info p:nth-child(2) {
+  font-size: 8px;
+  margin-top: 2px;
+  color: #fff;
+}
+.lnn-up, .lnn-down {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-left: 10px;
+}
+.lnn-floor-outer {
+  height: 300px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: scroll;
+}
+.lnn-floor-outer::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+.lnn-floor-num {
+  margin-top: 5px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+}
+.lnn-floor {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  margin-top: -150px;
+  width: 40px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.lnn-stacker-map-outer {
+  width: 100%;
+  height: calc(100vh);
+  background: rgba(2,19,45,.9);
+  overflow: scroll;
+  position: relative;
+}
+
+.lnn-stacker-map-outer::-webkit-scrollbar-thumb {
+  background-color: #a1a3a9;
+  border-radius: 3px;
+}
+
+.lnn-stacker-car-outer {
+  position: absolute;
+  transform: scale(1, -1);
+}
+
+.lnn-stacker-car {
+  position: absolute;
+  cursor: pointer;
+  z-index: 201;
+  border-radius: 2px 2px;
+  background: #ffbd15;
+  /*background-image: url(../../assets/stacker.png);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.robot-transform {
+  transition: top 2.5s linear, left 2.5s linear;
+}
+
+#stacker {
+  position: absolute;
+  z-index: 100;
+}
+
+#stackerFrame {
+  position: absolute;
+  z-index:  101;
+}
+
+#good {
+  position: absolute;
+  z-index:  102;
+}
+
+#router{
+  position: absolute;
+  z-index:  103;
+}
+
+.lnn-stacker-map-outer::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}

@@ -22,8 +22,8 @@
                     </FormItem>
                     <FormItem prop="password">
                         <Select size="large" placeholder="请选择进入类型" v-model="loginForm.type">
-                            <Option value="stacker">STACKER</Option>
-                            <Option value="rgv">RGV</Option>
+                            <Option value="stacker">堆垛机</Option>
+                            <Option value="rgv">穿梭车</Option>
                         </Select>
                     </FormItem>
                 </Form>
@@ -40,7 +40,13 @@
         name: "login",
         data() {
             return {
-                loginForm: {},
+                loginInfo: {
+                    userName: 'admin',
+                    password: '123456'
+                },
+                loginForm: {
+                    userName: 'admin'
+                },
                 rules: {
                     userName: [
                         {required: true, message: '请输入用户名', trigger: 'blur'}
@@ -58,8 +64,17 @@
             submitLoginInfo() {
                 this.$refs['lnn-form'].validate(valid => {
                     if (valid) {
+                        if (this.loginForm.userName != this.loginInfo.userName &&
+                        this.loginForm.password != this.loginInfo.password) {
+                            this.$Notice.error({
+                                title: '提示',
+                                desc: '用户名或密码错误',
+                                duration: 5
+                            });
+                            return false;
+                        }
                         this.$Notice.success({
-                            title: '登录成功',
+                            title: '提示',
                             desc: '登录成功',
                             duration: 5
                         });
